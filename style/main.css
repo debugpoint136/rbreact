@@ -2,3 +2,86 @@
 .list-group-item {
   height: 60px;
 }
+
+form {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-bottom: #eee solid 1px;
+}
+
+li .text {
+  margin-left: 50px;
+}
+
+li.checked {
+  color: #888;
+}
+
+@media (max-width: 800px) {
+  li {
+    padding: 12px 15px;
+  }
+
+  .search {
+    width: 150px;
+    clear: both;
+  }
+
+  .new-task input {
+    padding-bottom: 5px;
+  }
+}
+
+header {
+  margin-top: 50px;
+  background: #d2edf4;
+  background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+  padding: 65px 15px 15px 15px;
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+  height: 200px;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #315481;
+  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  background-attachment: fixed;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100%;
+  background: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+.li-text {
+  margin-left: 50px;
+}

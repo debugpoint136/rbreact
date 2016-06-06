@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class PickDatasets extends Component {
+class Datasets extends Component {
   render () {
     return (
       <div>
-        PickDatasets Component
+        Datasets Component
       </div>
     );
   }
 }
 
-export default PickDatasets;
+export default Datasets;

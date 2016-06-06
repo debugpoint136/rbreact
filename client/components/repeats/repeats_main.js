@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class PickRepeats extends Component {
+class Repeats extends Component {
   render () {
     return (
       <div>
-        PickRepeats Component
+        Repeats Component
       </div>
     );
   }
 }
 
-export default PickRepeats;
+export default Repeats;
