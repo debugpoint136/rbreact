@@ -9,12 +9,18 @@ class AddTissue extends Component {
 
   render () {
     return(
-      <form onSubmit={ this.handleSubmit.bind(this) }>
-        <div className="form-group">
-          <input ref="tissue_input" className="form-control new-task" placeholder="Blood"/>
-        </div>
-        <button className="btn btn-primary">Add Tissue</button>
-      </form>
+      <div className="container">
+        <header>
+          <h1>Tissues</h1>
+        </header>
+
+        <form className="form-inline" onSubmit={ this.handleSubmit.bind(this) }>
+          <div className="form-group">
+            <input ref="tissue_input" className="form-control new-task" placeholder="Blood"/>
+            <button type="submit" className="btn btn-primary">Add Tissue</button>
+          </div>
+        </form>
+      </div>
     );
   }
 }

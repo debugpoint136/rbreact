@@ -5,7 +5,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './components/app';
 import Browser from './components/browser/browser_main';
 import Datasets from './components/datasets/datasets_main';
-import Tissues from './components/datasets/tissues/tissues_main';
+import Tissues from './components/datasets/tissues/main';
 import Repeats from './components/repeats/repeats_main';
 
 // Assay Categories
@@ -18,7 +18,7 @@ import TaskList from './components/tasks/task_list';
 import PlayApp from './playground/play_app';
 
 // Collections
-import { TissuesDB } from '../imports/collections/tissues';
+
 
 const routes = (
   <Router history={ browserHistory }>

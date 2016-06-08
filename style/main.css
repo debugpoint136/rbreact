@@ -21,6 +21,7 @@ body {
   margin: 0 auto;
   min-height: 100%;
   background: white;
+  border-radius: 5px;
 }
 
 header {
@@ -43,9 +44,13 @@ h1 {
 }
 
 form {
-  margin-top: 10px;
-  margin-bottom: -10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   position: relative;
+}
+
+button {
+  margin-left: 10px;
 }
 
 .new-task input {
@@ -123,6 +128,33 @@ header .hide-completed {
     padding-bottom: 5px;
   }
 }
+
+/* TISSUE TYPE */
+.tissue-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 250px;
+  background: #d2edf4;
+  background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+  padding: 20px 15px 15px 15px;
+  position: relative;
+  margin: 10px 10px 10px 10px;
+}
+
+.selected-tissue {
+  width: 250px;
+  background: #FDC824;
+  background-image: linear-gradient(to bottom, #FDC824, #B18C19 100%);
+  padding: 20px 15px 15px 15px;
+  position: relative;
+  margin: 10px 10px 10px 10px;
+  font-weight: bold;
+}
+
 /*PLAYGROUND*/
 
 .bar {

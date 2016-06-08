@@ -3,19 +3,18 @@ import React, { Component } from 'react';
 class TissueItem extends Component {
 
   onToggle(_id) {
-    const completed = !this.props.completed;
-    Meteor.call('tissues.update', _id, completed );
+    const selected = !this.props.selected;
+    Meteor.call('tissues.update', _id, selected );
   }
 
   render () {
-     var { _id, text, completed} = this.props;
+     var { _id, text, selected} = this.props;
 
     return (
       <div onClick={() => { this.onToggle( _id);}}>
         <li>
-          <input type="checkbox" checked={ completed }/>
-          <span className="li-text">{ text }</span>
-
+          <input type="checkbox" readOnly checked={ selected }/>
+          <span className="text">{ text }</span>
         </li>
       </div>
     );

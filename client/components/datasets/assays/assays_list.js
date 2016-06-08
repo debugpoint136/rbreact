@@ -1,13 +1,14 @@
 import React, { PropTypes, Component } from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
 import ReactDOM from 'react-dom';
+import { Assays } from '../../../../imports/api/assays';
 import Assay from './assay';
-import { assayDict } from '../../../../imports/dictionary/assays';
 
-class AssayList  extends Component {
+class AssaysList  extends Component {
 
-  renderAssays() {
-    return assayDict.map((assay) => (
-      <Assay key={assay._id} assay={assay} />
+  renderRows() {
+    return this.props.assays.map((assay) => (
+        <Assay key={assay._id} assay={assay}/>
     ));
   }
 
@@ -19,7 +20,7 @@ class AssayList  extends Component {
         </header>
 
         <ul>
-          { this.renderAssays() }
+          { this.renderRows() }
         </ul>
       </div>
     );
@@ -27,4 +28,8 @@ class AssayList  extends Component {
   }
 }
 
-export default AssayList;
+export default createContainer(() => {
+
+  return { assays: Assays.find({}).fetch() };
+
+}, AssaysList);
