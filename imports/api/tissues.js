@@ -3,12 +3,13 @@ import { Mongo } from 'meteor/mongo';
 export const Tissues = new Mongo.Collection('tissues');
 
 Meteor.methods({
-  'tissues.insert': function(id, text, type) {
+  'tissues.insert': function(id, text, type, members) {
     Tissues.insert({
       _id: id,
       text : text,
       selected: false,
-      type: type
+      type: type,
+      members: members
     });
   },
   'tissues.update': function(id, selected) {

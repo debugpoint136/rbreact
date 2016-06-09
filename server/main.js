@@ -15,7 +15,7 @@ Meteor.startup(() => {
 
   if ( Tissues.find({}).fetch().length === 0) {
     tissueDict.map((tissue) => {
-      Meteor.call('tissues.insert', tissue._id, tissue.text, tissue.type );
+      Meteor.call('tissues.insert', tissue._id, tissue.text, tissue.type, tissue.members );
     });
   };
 });

@@ -26,11 +26,13 @@ function processSelectedTbyA(res) {
   var samplePins = [];
   var rowLabels = [];
 
+  console.log(res);
+
   res.samples.forEach(function(t) {
       samplePins.push(t._id);
     	rowLabels.push(t.text);
   });
   res.assays.forEach(function(a) {
-    console.log(a);
+    
   });
 }
