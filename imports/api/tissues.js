@@ -14,5 +14,11 @@ Meteor.methods({
   'tissues.update': function(id, selected) {
     Tissues.update( id, { $set: { selected }
     });
+  },
+  'tissues.getAll': function () {
+    return Tissues.find({}).fetch();
+  },
+  'tissues.getSelected': function () {
+    return Tissues.find({ selected: true }).fetch();
   }
 });

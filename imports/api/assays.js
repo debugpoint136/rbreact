@@ -14,5 +14,8 @@ Meteor.methods({
   'assays.update': function(id, selected) {
     Assays.update( id, { $set: { selected }
     });
+  },
+  'assays.getSelected': function() {
+    return Assays.find({ selected: true }).fetch();
   }
 });

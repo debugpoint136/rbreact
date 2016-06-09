@@ -38,3 +38,6 @@ const routes = (
 Meteor.startup(() => {
   ReactDOM.render(routes, document.querySelector('.render-target'));
 });
+
+// Test - Playground
+import '../imports/api/setup';
