@@ -49,7 +49,7 @@ function processSelectedTbyA(res) {
 
   res.samples.forEach(function(t) {
     (t.members).forEach((s) => {
-      samplePins.push(s);
+      samplePins.push(SampleRows[s]);
       rowLabels.push(s);
     });
 
@@ -62,17 +62,18 @@ function processSelectedTbyA(res) {
     });
   });
 
+
   assayPins.forEach(function(assayPin) {
   	var sampleTarget = [];
   	var tmp = AssayBySample2D[assayPin];
 
   	samplePins.forEach(function(s) {
-      console.log(tmp[s]);
     	sampleTarget.push( tmp[s] );
     });
 
     dataframe[assayPin] = sampleTarget;
   });
+
 
   Object.keys(dataframe).forEach(function(assay, i) {
     assayLabels.push(assay);
@@ -99,8 +100,6 @@ function processSelectedTbyA(res) {
     }
     });
   });
-
-  // console.log(formattedData);
 }
 
 
